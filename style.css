@@ -1,0 +1,15 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+#dvd-logo{
+    position: absolute;
+    padding: 10px;
+    top: 0px;
+    left: 0px;
+    background-color: blue;
+    transition: all .015s linear;
+}
