@@ -31,6 +31,7 @@ function colorRandomizer(){
 function borderGlow(pos){
     let dvd = document.getElementById("dvd-logo");
     let windowDiv = document.getElementById("window");
+    windowDiv.style.transition = 'all .2s'
     switch (pos) {
         case 'top':
             windowDiv.style.boxShadow = 'inset 0px 20px 10px -10px ' + dvd.style.backgroundColor;
