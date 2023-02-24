@@ -1,8 +1,16 @@
-let dvdColors = ["#9dcdbc","#5e755a","#8b6697","#dfa352","#6f7e94","#32acc3","#8de157","#5d58ce","#3fac90","#6a9e6f","#908263","#35ac5b","#8e51b4","#5f9ceb","#91cec1","#39e279","#3d3abb","#98cc90"];
 let nextDVDcolor = '';
 
 let dvdPosLeft = 0;
 let dvdPosTop = 0;
+
+let Screen = {
+    width : document.documentElement.clientWidth,
+    height : document.documentElement.clientHeight
+}
+
+let middleX = Screen.width / 2;
+let middleY = Screen.width / 2;
+
 
 let downUp = true;    //down  = true, up   = false
 let rightLeft = true; //right = true, left = false
@@ -13,11 +21,6 @@ let beforeRightLeft = rightLeft;
 let hitY = false;
 let hitX = false;
 
-let Screen = {
-    width : window.innerWidth,
-    height : window.innerHeight
-}
-
 setInterval(move,15)
 
 function getRandomInt(min, max) {
@@ -25,7 +28,7 @@ function getRandomInt(min, max) {
 }
 
 function colorRandomizer(){
-    return dvdColors[getRandomInt(0,dvdColors.length)];
+    return 'rgb('+getRandomInt(66,255)+','+getRandomInt(66,255)+','+getRandomInt(66,255)+')';
 }
 
 function borderGlow(pos){
@@ -81,6 +84,10 @@ function move(){
     let dvd = document.getElementById("dvd-logo");
     let windowDiv = document.getElementById("window");
 
+
+    middleX = Screen.width / 2;
+    middleY = Screen.height / 2;
+
     Screen.width = window.innerWidth,
     Screen.height = window.innerHeight
 
@@ -118,9 +125,9 @@ function move(){
     if(downUp !== beforeDownUp){ //top & bottom hit
         hitX = true;
         dvd.style.backgroundColor = colorRandomizer();
-        if(dvdPosTop <= (Screen.height / 2)){
+        if(dvdPosTop <= (middleY)){
             borderGlow('top')
-        }else if(dvdPosTop > (Screen.height / 2)){
+        }else if(dvdPosTop > (middleY)){
             borderGlow('bottom')
         }
     }
@@ -128,9 +135,9 @@ function move(){
     if(rightLeft !== beforeRightLeft){ //right & left hit
         hitY = true;
         dvd.style.backgroundColor = colorRandomizer();
-        if(dvdPosLeft <= (Screen.width / 2)){
+        if(dvdPosLeft <= (middleX)){
             borderGlow('left')
-        }else if(dvdPosLeft > (Screen.width / 2)){
+        }else if(dvdPosLeft > (middleX)){
             borderGlow('right')
         }
     }
