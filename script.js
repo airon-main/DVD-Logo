@@ -126,9 +126,9 @@ function move(){
         hitX = true;
         dvd.style.backgroundColor = colorRandomizer();
         if(dvdPosTop <= (middleY)){
-            borderGlow('top')
+            // borderGlow('top')
         }else if(dvdPosTop > (middleY)){
-            borderGlow('bottom')
+            // borderGlow('bottom')
         }
     }
 
@@ -136,9 +136,9 @@ function move(){
         hitY = true;
         dvd.style.backgroundColor = colorRandomizer();
         if(dvdPosLeft <= (middleX)){
-            borderGlow('left')
+            // borderGlow('left')
         }else if(dvdPosLeft > (middleX)){
-            borderGlow('right')
+            // borderGlow('right')
         }
     }
 
