@@ -31,53 +31,53 @@ function colorRandomizer(){
     return 'rgb('+getRandomInt(66,255)+','+getRandomInt(66,255)+','+getRandomInt(66,255)+')';
 }
 
-function borderGlow(pos){
-    let dvd = document.getElementById("dvd-logo");
-    let windowDiv = document.getElementById("window");
-    windowDiv.style.transition = 'all .2s'
-    switch (pos) {
-        case 'top':
-            windowDiv.style.boxShadow = 'inset 0px 20px 10px -10px ' + dvd.style.backgroundColor;
-            setTimeout(function(){
-                windowDiv.style.transition = 'all 1s'
-                windowDiv.style.boxShadow = 'none'
-                setTimeout(function(){
-                    windowDiv.style.transition = 'all .2s'
-                }, 1000);
-            }, 200);
-            break;
-        case 'bottom':
-            windowDiv.style.boxShadow = 'inset 0px -20px 10px -10px ' + dvd.style.backgroundColor;
-            setTimeout(function(){
-                windowDiv.style.transition = 'all 1s'
-                windowDiv.style.boxShadow = 'none'
-                setTimeout(function(){
-                    windowDiv.style.transition = 'all .2s'
-                }, 1000);
-            }, 200);
-            break;
-        case 'left':
-            windowDiv.style.boxShadow = 'inset 20px 0px 10px -10px ' + dvd.style.backgroundColor;
-            setTimeout(function(){
-                windowDiv.style.transition = 'all 1s'
-                windowDiv.style.boxShadow = 'none'
-                setTimeout(function(){
-                    windowDiv.style.transition = 'all .2s'
-                }, 1000);
-            }, 200);
-            break;
-        case 'right':
-            windowDiv.style.boxShadow = 'inset -20px 0px 10px -10px ' + dvd.style.backgroundColor;
-            setTimeout(function(){
-                windowDiv.style.transition = 'all 1s'
-                windowDiv.style.boxShadow = 'none'
-                setTimeout(function(){
-                    windowDiv.style.transition = 'all .2s'
-                }, 1000);
-            }, 200);
-            break;
-    }
-}
+// function borderGlow(pos){
+//     let dvd = document.getElementById("dvd-logo");
+//     let windowDiv = document.getElementById("window");
+//     windowDiv.style.transition = 'all .2s'
+//     switch (pos) {
+//         case 'top':
+//             windowDiv.style.boxShadow = 'inset 0px 20px 10px -10px ' + dvd.style.backgroundColor;
+//             setTimeout(function(){
+//                 windowDiv.style.transition = 'all 1s'
+//                 windowDiv.style.boxShadow = 'none'
+//                 setTimeout(function(){
+//                     windowDiv.style.transition = 'all .2s'
+//                 }, 1000);
+//             }, 200);
+//             break;
+//         case 'bottom':
+//             windowDiv.style.boxShadow = 'inset 0px -20px 10px -10px ' + dvd.style.backgroundColor;
+//             setTimeout(function(){
+//                 windowDiv.style.transition = 'all 1s'
+//                 windowDiv.style.boxShadow = 'none'
+//                 setTimeout(function(){
+//                     windowDiv.style.transition = 'all .2s'
+//                 }, 1000);
+//             }, 200);
+//             break;
+//         case 'left':
+//             windowDiv.style.boxShadow = 'inset 20px 0px 10px -10px ' + dvd.style.backgroundColor;
+//             setTimeout(function(){
+//                 windowDiv.style.transition = 'all 1s'
+//                 windowDiv.style.boxShadow = 'none'
+//                 setTimeout(function(){
+//                     windowDiv.style.transition = 'all .2s'
+//                 }, 1000);
+//             }, 200);
+//             break;
+//         case 'right':
+//             windowDiv.style.boxShadow = 'inset -20px 0px 10px -10px ' + dvd.style.backgroundColor;
+//             setTimeout(function(){
+//                 windowDiv.style.transition = 'all 1s'
+//                 windowDiv.style.boxShadow = 'none'
+//                 setTimeout(function(){
+//                     windowDiv.style.transition = 'all .2s'
+//                 }, 1000);
+//             }, 200);
+//             break;
+//     }
+// }
 
 function move(){
 
